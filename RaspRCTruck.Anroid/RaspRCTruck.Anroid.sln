@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspRCTruck.Anroid.Android", "RaspRCTruck.Anroid\RaspRCTruck.Anroid.Android\RaspRCTruck.Anroid.Android.csproj", "{2EEAAC39-1071-4BAE-B033-375C0C81075D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RaspRCTruck.Anroid", "RaspRCTruck.Anroid\RaspRCTruck.Anroid\RaspRCTruck.Anroid.shproj", "{4B1E8E9C-A5DC-42E6-A3E2-464B9F78DDA7}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		RaspRCTruck.Anroid\RaspRCTruck.Anroid\RaspRCTruck.Anroid.projitems*{2eeaac39-1071-4bae-b033-375c0c81075d}*SharedItemsImports = 4
+		RaspRCTruck.Anroid\RaspRCTruck.Anroid\RaspRCTruck.Anroid.projitems*{4b1e8e9c-a5dc-42e6-a3e2-464b9f78dda7}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE8C9204-F720-4CDF-9E8A-CB10BA5F27B0}
+	EndGlobalSection
+EndGlobal
