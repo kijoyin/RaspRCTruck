@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspRCTruck.Anroid.Android"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RaspRCTruck.Anroid", "RaspRCTruck.Anroid\RaspRCTruck.Anroid\RaspRCTruck.Anroid.shproj", "{4B1E8E9C-A5DC-42E6-A3E2-464B9F78DDA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspRCTruckOrginal", "RaspRCTruckOrginal\RaspRCTruckOrginal.csproj", "{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		RaspRCTruck.Anroid\RaspRCTruck.Anroid\RaspRCTruck.Anroid.projitems*{2eeaac39-1071-4bae-b033-375c0c81075d}*SharedItemsImports = 4
@@ -23,6 +25,12 @@ Global
 		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2EEAAC39-1071-4BAE-B033-375C0C81075D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1239ABB-F4EA-4EC8-A4C2-5FA6D0E3469F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
