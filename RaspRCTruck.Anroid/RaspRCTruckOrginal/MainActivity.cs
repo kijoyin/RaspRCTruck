@@ -16,8 +16,10 @@ namespace RaspRCTruckOrginal
         TextView _sensorTextView;
         TextView textView;
         StringBuilder builder = new StringBuilder();
+        bool IsFirst = true;
 
         float[] history = new float[2];
+        float[] original = new float[2];
         String[] direction = { "NONE", "NONE" };
 
         public void OnAccuracyChanged(Sensor sensor, SensorStatus accuracy)
@@ -29,37 +31,33 @@ namespace RaspRCTruckOrginal
         {
             lock (_syncLock)
             {
+                if(IsFirst)
+                {
+                    original[0] = e.Values[0];
+                    original[1] = e.Values[1];
+                    IsFirst = false;
+                }
                 float xChange = history[0] - e.Values[0];
                 float yChange = history[1] - e.Values[1];
+                float xChangeFromOriginal = original[0] - e.Values[0];
+                float yChangeFromOriginal = original[1] - e.Values[1];
                 history[0] = e.Values[0];
                 history[1] = e.Values[1];
                 if(xChange == 0 && yChange == 0)
                 {
                     return;
                 }
-                //direction[0] = "Drive straight";
-                if (xChange > 2)
+                if (xChangeFromOriginal <= 2 && xChangeFromOriginal >= -2)
                 {
-                    if (direction[0] == "Turn right")
-                    {
-                        direction[0] = "Drive straight";
-                    }
-                    else
-                    {
-                        direction[0] = "Turn left";
-                    }
+                    direction[0] = "Drive straight";
+                }
+                else if (xChange > 2)
+                {
+                    direction[0] = "Turn left";
                 }
                 else if (xChange < -2)
                 {
-
-                    if (direction[0] == "Turn left")
-                    {
-                        direction[0] = "Drive straight";
-                    }
-                    else
-                    {
-                        direction[0] = "Turn right";
-                    }
+                    direction[0] = "Turn right";
                 }
 
 
