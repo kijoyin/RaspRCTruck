@@ -5,10 +5,12 @@ using Android.Support.V7.App;
 using Android.Hardware;
 using System;
 using System.Text;
+using Android.Content.PM;
+using Android.Views;
 
 namespace RaspRCTruckOrginal
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ScreenOrientation = ScreenOrientation.Landscape)]
     public class MainActivity : AppCompatActivity, ISensorEventListener
     {
         static readonly object _syncLock = new object();
@@ -71,24 +73,26 @@ namespace RaspRCTruckOrginal
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            RequestWindowFeature(WindowFeatures.NoTitle);
+            //Remove notification bar
+            Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-            _sensorManager = (SensorManager)GetSystemService(SensorService);
-            _sensorTextView = FindViewById<TextView>(Resource.Id.accelerometer_text);
+
         }
 
         protected override void OnResume()
         {
             base.OnResume();
-            _sensorManager.RegisterListener(this,
-                                            _sensorManager.GetDefaultSensor(SensorType.Orientation),
-                                            SensorDelay.Ui);
+            //_sensorManager.RegisterListener(this,
+            //                                _sensorManager.GetDefaultSensor(SensorType.Orientation),
+            //                                SensorDelay.Ui);
         }
 
         protected override void OnPause()
         {
             base.OnPause();
-            _sensorManager.UnregisterListener(this);
+            //_sensorManager.UnregisterListener(this);
         }
     }
 }
